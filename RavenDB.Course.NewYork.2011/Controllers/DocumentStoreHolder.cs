@@ -21,10 +21,9 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 					if (documentStore != null)
 						return documentStore;
 
-					var customConnection = ConfigurationManager.ConnectionStrings[Environment.MachineName] != null;
 					documentStore = new DocumentStore
 					{
-						ConnectionStringName = customConnection ? Environment.MachineName : "RavenDB"
+						ConnectionStringName = ConnectionStringName
 					};
 
 
@@ -33,6 +32,16 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 				}
 
 				return documentStore;
+			}
+		}
+
+		private static string ConnectionStringName
+		{
+			get
+			{
+				var customConnection = ConfigurationManager.ConnectionStrings[Environment.MachineName] != null;
+				var connectionStringName = customConnection ? Environment.MachineName : "RavenDB";
+				return connectionStringName;
 			}
 		}
 	}
