@@ -12,3 +12,6 @@ resharper.settings.xml
 *.user
 [Bb]uild*
 [Dd]ist
+
+/packages/RavenDB.1.0.499/server/Data/*
+/packages/RavenDB.1.0.499/server/Logs/*
