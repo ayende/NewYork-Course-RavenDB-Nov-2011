@@ -17,5 +17,13 @@ namespace RavenDB.Course.NewYork._2011.Models
 			public string Comment { get; set; }
 			public string Author { get; set; }
 		}
+
+		public Location Based { get; set; }
+	}
+
+	public class Location
+	{
+		public double Lat { get; set; }
+		public double Lng { get; set; }
 	}
 }

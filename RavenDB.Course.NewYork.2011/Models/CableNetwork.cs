@@ -1,4 +1,6 @@
-﻿namespace RavenDB.Course.NewYork._2011.Models
+﻿using System.Collections.Generic;
+
+namespace RavenDB.Course.NewYork._2011.Models
 {
 	public class CableNetwork
 	{
@@ -6,5 +8,6 @@
 		public string Name { get; set; }
 		public string Description { get; set; }
 		public string LogoUrl { get; set; }
+		public Dictionary<string, string> Fun { get; set; }
 	}
 }

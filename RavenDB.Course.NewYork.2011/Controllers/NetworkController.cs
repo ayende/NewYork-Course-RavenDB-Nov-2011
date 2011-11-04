@@ -21,6 +21,36 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 			return Content("Created");
 		}
 
+		public ActionResult Search3(string text)
+		{
+			var results = Session
+				.Query<ProgramsAndAnchors_ByName.Result, ProgramsAndAnchors_ByName>()
+				.Where(x=>x.Name == text)
+				.As<object>()
+				.ToList();
+
+			return Json(results, JsonRequestBehavior.AllowGet);
+		}
+
+		public ActionResult Search4()
+		{
+			var programs = Session.Advanced.LuceneQuery<Program, Programs_ByRatingAndLocation>()
+				.WithinRadiusOf(3, 40.7635581, -73.9735082)
+				.WhereEquals("Rating", "PG")
+				.ToList();
+
+			return Json(programs,JsonRequestBehavior.AllowGet);
+		}
+
+		public ActionResult AddAnchor(string name)
+		{
+			Session.Store(new Anchor
+			{
+				Name = name,
+			});
+			return Content("Hired");
+		}
+
 		public ActionResult Search2(string text)
 		{
 			var results = Session.Query<ProgramsReviews.Result, ProgramsReviews>()

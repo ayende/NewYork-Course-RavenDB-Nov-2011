@@ -37,6 +37,9 @@
     <Reference Include="AsyncCtpLibrary, Version=1.0.4107.18181, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\RavenDB-Embedded.1.0.499\lib\net40\AsyncCtpLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Lucene.Net">
+      <HintPath>..\packages\RavenDB-Embedded.1.0.499\lib\net40\Lucene.Net.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.0.2\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -88,7 +91,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Indexes\FunFactsAboutNetworks.cs" />
+    <Compile Include="Indexes\ProgramsAndAnchors_ByName.cs" />
+    <Compile Include="Indexes\ProgramsReviews.cs" />
+    <Compile Include="Indexes\Programs_ByRatingAndLocation.cs" />
     <Compile Include="Indexes\Programs_Reviews2.cs" />
+    <Compile Include="Models\Anchor.cs" />
     <Compile Include="Models\CableNetwork.cs" />
     <Compile Include="Models\Program.cs" />
     <Compile Include="Models\ProgramRating.cs" />
