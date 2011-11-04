@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Web.Mvc;
+using Raven.Abstractions.Data;
 using Raven.Client.Linq;
 using RavenDB.Course.NewYork._2011.Indexes;
 using RavenDB.Course.NewYork._2011.Models;
@@ -19,6 +20,37 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 			});
 
 			return Content("Created");
+		}
+
+
+		public ActionResult Set()
+		{
+			var databaseCommands = Session.Advanced.DatabaseCommands;
+
+			databaseCommands.UpdateByIndex("Temp/Programs/ByNetworkId",
+				new IndexQuery
+				{
+					Query = "NetworkId:[[NULL_VALUE]]"
+				}, new PatchRequest[]
+				{
+					new PatchRequest
+					{
+						Name = "NetworkId",
+						Type = PatchCommandType.Set,
+						Value = "cablenetworks/1"
+					}, 
+				});
+
+			return Content("?");
+		}
+		public ActionResult Populate(string name, int hour)
+		{
+			Session.Store(new Program
+			{
+				Name = name,
+				TimeSlot = new TimeSpan(0,hour,30)
+			});
+			return Content("OK");
 		}
 
 		public ActionResult Search3(string text)

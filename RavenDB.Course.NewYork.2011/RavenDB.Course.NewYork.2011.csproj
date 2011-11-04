@@ -92,10 +92,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Indexes\FunFactsAboutNetworks.cs" />
+    <Compile Include="Indexes\NetworkAndProgramNames.cs" />
     <Compile Include="Indexes\ProgramsAndAnchors_ByName.cs" />
     <Compile Include="Indexes\ProgramsReviews.cs" />
     <Compile Include="Indexes\Programs_ByRatingAndLocation.cs" />
     <Compile Include="Indexes\Programs_Reviews2.cs" />
+    <Compile Include="Indexes\Programs_Schedule.cs" />
     <Compile Include="Models\Anchor.cs" />
     <Compile Include="Models\CableNetwork.cs" />
     <Compile Include="Models\Program.cs" />
