@@ -26,7 +26,7 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 		public ActionResult Set()
 		{
 			var databaseCommands = Session.Advanced.DatabaseCommands;
-
+			
 			databaseCommands.UpdateByIndex("Temp/Programs/ByNetworkId",
 				new IndexQuery
 				{
