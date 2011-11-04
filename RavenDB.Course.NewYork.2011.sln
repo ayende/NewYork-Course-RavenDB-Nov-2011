@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RavenDB.Course.NewYork.2011", "RavenDB.Course.NewYork.2011\RavenDB.Course.NewYork.2011.csproj", "{D282E7AE-7121-416F-A96F-E2C2AFE86C3D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{707DA456-1FCA-449E-A8F0-580E2C810569}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{D282E7AE-7121-416F-A96F-E2C2AFE86C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D282E7AE-7121-416F-A96F-E2C2AFE86C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D282E7AE-7121-416F-A96F-E2C2AFE86C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{707DA456-1FCA-449E-A8F0-580E2C810569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{707DA456-1FCA-449E-A8F0-580E2C810569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{707DA456-1FCA-449E-A8F0-580E2C810569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{707DA456-1FCA-449E-A8F0-580E2C810569}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
