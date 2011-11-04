@@ -3,12 +3,10 @@ using RavenDB.Course.NewYork._2011.Models;
 
 namespace RavenDB.Course.NewYork._2011.Controllers
 {
-	public class NetworkController : Controller
+	public class NetworkController : RavenController
 	{
 		 public ActionResult New(string name)
 		 {
-		 	using(var session = DocumentStoreHolder.DocumentStore.OpenSession())
-		 	{
 				session.Store(new CableNetwork
 				{
 					Name = name,
@@ -16,8 +14,6 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 					LogoUrl = "http://logo/"+name
 				});
 
-		 		session.SaveChanges();
-		 	}
 
 		 	return Content("Created");
 		 }

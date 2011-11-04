@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="Controllers\DocumentStoreHolder.cs" />
     <Compile Include="Controllers\NetworkController.cs" />
+    <Compile Include="Controllers\RavenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
