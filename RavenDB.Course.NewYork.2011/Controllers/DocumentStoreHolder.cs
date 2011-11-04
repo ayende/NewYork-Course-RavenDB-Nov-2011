@@ -2,6 +2,8 @@ using System;
 using System.Configuration;
 using Raven.Client;
 using Raven.Client.Document;
+using Raven.Client.Indexes;
+using RavenDB.Course.NewYork._2011.Indexes;
 
 namespace RavenDB.Course.NewYork._2011.Controllers
 {
@@ -29,6 +31,7 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 
 					documentStore.Initialize();
 
+					IndexCreation.CreateIndexes(typeof(Programs_Reviews2).Assembly, documentStore);
 				}
 
 				return documentStore;

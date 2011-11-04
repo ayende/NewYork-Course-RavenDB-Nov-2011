@@ -82,11 +82,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\DocumentStoreHolder.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NetworkController.cs" />
     <Compile Include="Controllers\RavenController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Indexes\Programs_Reviews2.cs" />
     <Compile Include="Models\CableNetwork.cs" />
     <Compile Include="Models\Program.cs" />
     <Compile Include="Models\ProgramRating.cs" />
