@@ -5,21 +5,21 @@ namespace RavenDB.Course.NewYork._2011.Controllers
 {
 	public abstract class RavenController: Controller
 	{
-		protected IDocumentSession session;
+		public new IDocumentSession Session { get; set; }
 
 		protected override void OnActionExecuting(ActionExecutingContext filterContext)
 		{
-			session = DocumentStoreHolder.DocumentStore.OpenSession();
+			Session = DocumentStoreHolder.DocumentStore.OpenSession();
 		}
 
 		protected override void OnActionExecuted(ActionExecutedContext filterContext)
 		{
-			using(session)
+			using(Session)
 			{
 				if (filterContext.Exception != null)
 					return;
 
-				session.SaveChanges();
+				Session.SaveChanges();
 			}
 		}
 
